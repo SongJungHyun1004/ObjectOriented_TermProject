@@ -36,7 +36,12 @@ int main()
 		//cout << postfix << endl;
 		if (quit)
 			break;
-		cout << calculate(postfix) << endl;
+		if (calculate(postfix) == INT_MIN) {
+			cout << "(0으로 나눌 수 없습니다)잘못된 입력입니다. 다시 한번 입력해 주세요." << endl;
+		}
+		else {
+			cout << calculate(postfix) << endl;
+		}
 		getline(cin, input);
 	}
 

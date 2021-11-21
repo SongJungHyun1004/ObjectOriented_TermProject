@@ -23,6 +23,8 @@ int calculate(string postfix)
 			stack.pop();
 			int first = stack.top();
 			stack.pop();
+			if (ch == '/' && second == 0)
+				return INT_MIN;
 			Context* context = NULL;
 			switch (ch)
 			{
