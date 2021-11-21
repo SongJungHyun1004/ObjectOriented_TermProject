@@ -138,7 +138,7 @@ string Convert(string expression)
 					i--;
 					data = toDecimal(data);
 				}
-				else if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == ')' || ch == NULL) {// 숫자 0
+				else if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == ')' || isdigit(ch) || ch == NULL) {// 숫자 0
 					i--;
 				}
 				else {// 0다음 올 수 없는 문자가 있을 경우
