@@ -23,7 +23,7 @@ int main()
 		}
 		postfix = Convert(input);
 	}
-	cout << postfix << endl;
+	//cout << postfix << endl;
 	cout << calculate(postfix) << endl;
 	return 0;
 }
