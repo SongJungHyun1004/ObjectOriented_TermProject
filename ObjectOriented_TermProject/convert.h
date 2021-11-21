@@ -123,13 +123,6 @@ string Convert(string expression)
 					}
 					i--;
 					data = toDecimal(data);
-					if (!stack.empty()) {
-						if (!data.compare("0") && stack.top() == '/') {
-							cout << "(0으로 나눌 수 없습니다)";
-							error = 1;
-							break;
-						}
-					}
 				}
 				else if (ch == 'x') {// 0x로 시작하는 16진수
 					data = ch;
@@ -144,25 +137,9 @@ string Convert(string expression)
 					}
 					i--;
 					data = toDecimal(data);
-					if (!stack.empty()) {
-						if (!data.compare("0") && stack.top() == '/') {
-							cout << "(0으로 나눌 수 없습니다)";
-							error = 1;
-							break;
-						}
-					}
 				}
 				else if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == ')' || ch == NULL) {// 숫자 0
 					i--;
-					if (i != 0) {
-						ch = expression[--i];
-						if (ch == '/') {
-							cout << "(0으로 나눌 수 없습니다)";
-							error = 1;
-							break;
-						}
-						i++;
-					}
 				}
 				else {// 0다음 올 수 없는 문자가 있을 경우
 					error = 1;

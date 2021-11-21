@@ -33,17 +33,17 @@ int main()
 			}
 			postfix = Convert(input);
 		}
-		//cout << postfix << endl;
 		if (quit)
 			break;
-		if (calculate(postfix) == INT_MIN) {
+		int answer = calculate(postfix);
+		if (answer == INT_MIN) {
 			cout << "(0으로 나눌 수 없습니다)잘못된 입력입니다. 다시 한번 입력해 주세요." << endl;
 		}
 		else {
-			cout << calculate(postfix) << endl;
+			//cout << postfix << endl;
+			cout << answer << endl;
 		}
 		getline(cin, input);
 	}
-
 	return 0;
 }
